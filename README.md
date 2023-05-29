@@ -81,7 +81,9 @@ c. Model 3: Linear regression model on PolynomialFeatures with degree = 2 with 5
 
 d. Model 4: LASSO model 
 
-e. Model 5: Ridge model 
+e. Model 5: Apply PCA to reduce dimensionality before applying it on linear regression model taking in PolynomialFeatures with degree = 2
+
+f. Model 6: Applying ridge model 
 
 
 
