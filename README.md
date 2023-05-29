@@ -74,12 +74,21 @@ e. Split the data into training and development sets at a split of 70-30.
 
 a. Model 1: Ordinary linear regression with 92 features
 
+The training MSE was 1.1851, while the development MSE was 1.1616.  The predicted and observed vaues are plotted below.  Interestingly, the observed values appear to be greater than the predictions.
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/b1b0b674-285a-46b0-9763-c0bd41458a55)
 
 b. Model 2: Ordinary linear regression with 50 features
 
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/e4e9a173-c34f-45d6-853c-dbe0f43cbd0a)
+
+
 c. Model 3: Linear regression model on PolynomialFeatures with degree = 2 with 50 features
 
+
 d. Model 4: LASSO model 
+
+Unfortunately, all the coefficients derived from the LASSO model was zero and nothing conclusive can be drawn from this model. Hence, model 4 was dismissed from further evaluation.  
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/d50a81d2-1ee8-4fea-ba8f-fec62398d370)
 
 e. Model 5: Apply PCA to reduce dimensionality before applying it on linear regression model taking in PolynomialFeatures with degree = 2
 
