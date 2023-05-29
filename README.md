@@ -5,11 +5,20 @@ This project aims to build a predictive model to predict car prices in the Unite
 Below illustrates the process and the results of our prediction models.  The 6-step CRISP-DM Process is used in this predictive analytics. 
 
 ## Step 1: Business Understanding
-Task 1.  Build a predictive model using Linear Regression and determine which factors have the highest correlation and how much each factor contribute to explained variance.
 
-Task 2. Determine the top 5 factors affecting car price
+Task 1.  Build different predictive model using Linear Regression by varying the degree of PolynomialFeatures, applying PCA to reduce dimsensionality before applying Linear Regression, LASSO model to determine top factors and Ridge Model.
 
-Task 3. Can the price of a car be predicted based on its attribute with reasonable accuracy?
+Measure of effectiveness:
+
+1. Mean Squared Error of the Training datasets
+
+2. Mean Squared Error of the Training datasets
+
+3. R^2 value (for linear regression) to determine how much of the variance can be explained by the model
+
+Task 2. Using the above metrics, determine the best model 
+
+Task 3. For the best model, present the coefficients
 
 
 ## Step 2: Data Understanding 
@@ -62,6 +71,20 @@ e. Split the data into training and development sets at a split of 70-30.
 
 
 ## Step 4: Modelling 
+
+a. Model 1: Ordinary linear regression with 92 features
+
+
+b. Model 2: Ordinary linear regression with 50 features
+
+c. Model 3: Linear regression model on PolynomialFeatures with degree = 2 with 50 features
+
+d. Model 4: LASSO model 
+
+e. Model 5: Ridge model 
+
+
+
 
 
 ## Step 5: Evaluation
