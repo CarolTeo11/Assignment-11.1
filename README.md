@@ -74,15 +74,21 @@ e. Split the data into training and development sets at a split of 70-30.
 
 a. Model 1: Ordinary linear regression with 92 features
 
-The training MSE was 1.1851, while the development MSE was 1.1616.  The predicted and observed vaues are plotted below.  Interestingly, the observed values appear to be greater than the predictions.
-![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/b1b0b674-285a-46b0-9763-c0bd41458a55)
+The training MSE was 1.1806, while the development MSE was 1.1719.  The predicted and observed vaues are plotted below.  Interestingly, the observed values appear to be greater than the predictions.
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/4cc218fb-86de-4b04-a7bf-667866524302)
+
 
 b. Model 2: Ordinary linear regression with 50 features
 
-![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/e4e9a173-c34f-45d6-853c-dbe0f43cbd0a)
+The training MSE was 1.1961, while the development MSE was 1.2025.  The predicted and observed vaues are plotted below.  Again, the observed values appear to be greater than the predictions.
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/1758beca-fca1-4e6e-8a3a-9104873cb783)
+
 
 
 c. Model 3: Linear regression model on PolynomialFeatures with degree = 2 with 50 features
+
+While the training MSE was only 0.9175, the development MSE was 1.3094e+23.  The predicted and observed vaues are plotted below.  It appears that the prediction model made a few predictions that well-exceeded the reasonable range for car prices.
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/60e7169f-966f-44dd-ade8-4b8bc2e1e387)
 
 
 d. Model 4: LASSO model 
@@ -92,13 +98,19 @@ Unfortunately, all the coefficients derived from the LASSO model was zero and no
 
 e. Model 5: Apply PCA to reduce dimensionality before applying it on linear regression model taking in PolynomialFeatures with degree = 2
 
+Note: I run the PCA model with PCA__n_components = {5, 15, 30, 45, 60, 80, 100} and decided to keep the code to only 30 due to computational power required.  Also,  the accuracy did not increase significantly with more components
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/472a49b2-9713-4d4f-afa7-a54dd2e681c5)
+
+
+
 f. Model 6: Applying ridge model 
 
-
-
+I applied PolynomialFeatures for degree = 2 and applied GridSearchCV to alpha value = {0.1, 1 and 10}.  The best alpha value was 1 and the predicted values are shown below.  The training MSE was 0.9197 and the development MSE was 0.9643. 
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/ae38443f-d70a-410d-b612-413884d8f18b)
 
 
 ## Step 5: Evaluation
 
+The training and development MSE was plotted against the different models.  
 
 ## Step 6: Deployment 
