@@ -2,9 +2,9 @@
 
 This project aims to build a predictive model to predict car prices in the United States. 
 
-Below illustrates the process and the results of our prediction models.  The CRISP-DM Process is used in this predictive analytics. 
+Below illustrates the process and the results of our prediction models.  The 6-step CRISP-DM Process is used in this predictive analytics. 
 
-## Business Understanding
+## Step 1: Business Understanding
 Task 1.  Build a predictive model using Linear Regression and determine which factors have the highest correlation and how much each factor contribute to explained variance.
 
 Task 2. Determine the top 5 factors affecting car price
@@ -12,7 +12,7 @@ Task 2. Determine the top 5 factors affecting car price
 Task 3. Can the price of a car be predicted based on its attribute with reasonable accuracy?
 
 
-## Data Understanding 
+## Step 2: Data Understanding 
 ### Some steps taken to get to know the dataset and identify any quality issues within. By taking time to get to know the dataset and explore what information it contains and how this could be used to inform business understanding.
 
 a.	I obtained a set of car price data and the data fields are found in the figure below:
@@ -35,7 +35,7 @@ g.	Most importantly, in order to ensure the predicted car price would always be 
 
 
 
-## Data Preparation
+## Step 3: Data Preparation
 ### Based on the considerations stated out above under Data Understanding, data cleansing process was initiated.  
 
 a. Digitise the categorical data using pd.get_dummies (Note that "paint_color" and "state" was later dropped from the list of useful data after running the model and deciding to drop the number of features)
@@ -61,10 +61,10 @@ e. Split the data into training and development sets at a split of 70-30.
 
 
 
-## Modelling 
+## Step 4: Modelling 
 
 
-## Evaluation
+## Step 5: Evaluation
 
 
-## Deployment 
+## Step 6: Deployment 
