@@ -38,7 +38,26 @@ g.	Most importantly, in order to ensure the predicted car price would always be 
 ## Data Preparation
 ### Based on the considerations stated out above under Data Understanding, data cleansing process was initiated.  
 
-a. 
+a. Digitise the categorical data using pd.get_dummies (Note that "paint_color" and "state" was later dropped from the list of useful data after running the model and deciding to drop the number of features)
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/09145438-d8a1-4fef-ab17-7fd6edcf219f)
+
+b. Remove all the unnecessary data that we did not intend to train the model with (Note that "paint_color" and "state" was later dropped from the list of useful data after running the model and deciding to drop the number of features)
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/abc1386a-5405-448a-bbc3-bda45834256b)
+
+c.	Limit the value of car prices and apply logarithmic function to the car price.  
+
+  i. As above, I limited the car prices to at most $250,000 because car prices greater than $250,000 do not sound realistic and even if it were included, they are often outliers and can skewed the data and predictions.  
+
+  ii. When I first run the model, many of the price predictions were less than zero.  Hence, I decided to apply a logarithmic model on the car prices so that after applying an exponential function to reverse the logarithm, the price is positive.  Also, logarithm cannot be applied on value zero.
+
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/8a61b620-4bc5-44f7-a18b-1da1b725f27f)
+
+d. Because there are a whopping 92 features to train, I then run the correlation table to see the correlations of price to factors (even though this only measures linear relationship).  As manufacturer's information only first appears at the 15th position, I thought of training 2 models, one including manufacturer, the other excluding and determine if there is a huge difference in the model.  
+
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/3930d3b7-6b80-4c23-af17-0466d4801f59)
+
+
+e. Split the data into training and development sets at a split of 70-30.  
 
 
 
