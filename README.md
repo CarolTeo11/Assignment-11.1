@@ -118,8 +118,8 @@ A dataframe containing the training error (train_mse), development error (test_m
 
 ## Step 6: Deployment 
 
-Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will be deployed as it is the best performing model.  Because of its high dimensionality, it may be recommended to remove all features with coefficients close to zero.  
+Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will be deployed as it is the best performing model.  Here, I sorted the features by the magnitude of its coefficients and found that similar to all models, the "year" and "year^2" features have the highest coefficients. In fact, features which are multiples of the feature "year" appears to have the highest coefficients.  
 
-![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/312c4cb5-32ac-458b-9ae8-6ddb147fc3e9)
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/05310859-2f83-44a1-bb3b-8e999f1fb58b)
 
 However, if the client has new data, he/she can run the model using np.exp(best_model.predict(new_data)) to estimate the price of the car. 
