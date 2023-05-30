@@ -94,9 +94,11 @@ While the training MSE was only 0.9175, the development MSE was 1.3094e+23.  The
 d. Model 4: LASSO model 
 
 I apply a degree = 2 PolynomialFeature on the LASSO model.   The training MSE was 1.5672 while the development MSE was 1.5817.  The results are plotted below.  
+
 ![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/3022541b-dea5-4549-a5d6-e76f5da554ae)
 
 Because the predicted values look odd, I looked into the lasso coefficients and realise that almost all the coefficients were zero and the model is almost useless. 
+
 ![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/55cb7e9e-7f36-45f3-bf05-77cb3bae2a4c)
 
 e. Model 5: Applying ridge model 
@@ -107,8 +109,15 @@ I applied PolynomialFeatures for degree = 2 and applied GridSearchCV to alpha va
 
 ## Step 5: Evaluation
 
-A dataframe containing the training error (train_mse), development error (test_mse) and the explained variance is shown below.  The model with the lowest training and development error was 
+A dataframe containing the training error (train_mse), development error (test_mse) and the explained variance is shown below.  The model with the lowest training error was Model 3, the  the linear regression model trained on degree = 2  but its development error was way too high at 1.73e+21.  The model with the lowest development error was Model 5 - Ridge model and it also has a relatively low training error.  The model also has one of the highest explained variance of 0.4143.  Hence, we will proceed to deploy Model 5 - ridge model with alpha = 1 and Polynomial Features(degree = 2). 
+
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/04534e5f-6ed6-4336-a874-57c42cab7d11)
+
 
 ## Step 6: Deployment 
 
-After running the 
+Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will be deployed as it is the best performing model.  Because of its high dimensionality, it may be recommended to remove all features with coefficients close to zero.  
+
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/312c4cb5-32ac-458b-9ae8-6ddb147fc3e9)
+
+However, if the client has new data, he/she can run the model using np.exp(best_model.predict(new_data)) to estimate the price of the car. 
