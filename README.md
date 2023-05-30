@@ -93,17 +93,13 @@ While the training MSE was only 0.9175, the development MSE was 1.3094e+23.  The
 
 d. Model 4: LASSO model 
 
-Unfortunately, all the coefficients derived from the LASSO model was zero and nothing conclusive can be drawn from this model. Hence, model 4 was dismissed from further evaluation.  
-![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/d50a81d2-1ee8-4fea-ba8f-fec62398d370)
+I apply a degree = 2 PolynomialFeature on the LASSO model.   The training MSE was 1.5672 while the development MSE was 1.5817.  The results are plotted below.  
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/3022541b-dea5-4549-a5d6-e76f5da554ae)
 
-e. Model 5: Apply PCA to reduce dimensionality before applying it on linear regression model taking in PolynomialFeatures with degree = 2
+Because the predicted values look odd, I looked into the lasso coefficients and realise that almost all the coefficients were zero and the model is almost useless. 
+![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/55cb7e9e-7f36-45f3-bf05-77cb3bae2a4c)
 
-Note: I run the PCA model with PCA__n_components = {5, 15, 30, 45, 60, 80, 100} and decided to keep the code to only 30 due to computational power required.  Also,  the accuracy did not increase significantly with more components
-![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/472a49b2-9713-4d4f-afa7-a54dd2e681c5)
-
-
-
-f. Model 6: Applying ridge model 
+e. Model 5: Applying ridge model 
 
 I applied PolynomialFeatures for degree = 2 and applied GridSearchCV to alpha value = {0.1, 1 and 10}.  The best alpha value was 1 and the predicted values are shown below.  The training MSE was 0.9197 and the development MSE was 0.9643. 
 ![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/ae38443f-d70a-410d-b612-413884d8f18b)
@@ -111,6 +107,8 @@ I applied PolynomialFeatures for degree = 2 and applied GridSearchCV to alpha va
 
 ## Step 5: Evaluation
 
-The training and development MSE was plotted against the different models.  
+A dataframe containing the training error (train_mse), development error (test_mse) and the explained variance is shown below.  The model with the lowest training and development error was 
 
 ## Step 6: Deployment 
+
+After running the 
