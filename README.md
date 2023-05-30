@@ -6,7 +6,7 @@ Below illustrates the process and the results of our prediction models.  The 6-s
 
 ## Step 1: Business Understanding
 
-Task 1.  Build different predictive model using Linear Regression by varying the degree of PolynomialFeatures, applying PCA to reduce dimsensionality before applying Linear Regression, LASSO model to determine top factors and Ridge Model.
+Task 1.  Build different predictive model using Linear Regression by varying the degree of PolynomialFeatures, LASSO model to determine top factors and Ridge Model.
 
 Measure of effectiveness:
 
@@ -14,7 +14,7 @@ Measure of effectiveness:
 
 2. Mean Squared Error of the Training datasets
 
-3. R^2 value (for linear regression) to determine how much of the variance can be explained by the model
+3. Explained variance to determine how much of the variance can be explained by the model
 
 Task 2. Using the above metrics, determine the best model 
 
@@ -71,6 +71,7 @@ e. Split the data into training and development sets at a split of 70-30.
 
 
 ## Step 4: Modelling 
+### 5 models were deployed
 
 a. Model 1: Ordinary linear regression with 92 features
 
@@ -108,6 +109,7 @@ I applied PolynomialFeatures for degree = 2 and applied GridSearchCV to alpha va
 
 
 ## Step 5: Evaluation
+### A metric table was developed to evaluate the models. 
 
 A dataframe containing the training error (train_mse), development error (test_mse) and the explained variance is shown below.  The model with the lowest training error was Model 3, the  the linear regression model trained on degree = 2  but its development error was way too high at 1.73e+21.  The model with the lowest development error was Model 5 - Ridge model and it also has a relatively low training error.  The model also has one of the highest explained variance of 0.4143.  Hence, we will proceed to deploy Model 5 - ridge model with alpha = 1 and Polynomial Features(degree = 2). 
 
