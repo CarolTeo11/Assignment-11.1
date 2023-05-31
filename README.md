@@ -118,7 +118,7 @@ A dataframe containing the training error (train_mse), development error (test_m
 
 ## Step 6: Deployment 
 
-Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will be deployed as it is the best performing model.  Here, I sorted the features by the magnitude of its coefficients and found that similar to all models, the "year" and "year^2" features have the highest coefficients. In fact, features which are multiples of the feature "year" appears to have the highest coefficients.  Hence, it is important that this feature be included in the data collected in the future.  
+Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will be deployed as it is the best performing model.  Here, I sorted the features by the magnitude of its coefficients and found that similar to all models, the "year" and "year^2" features have the highest coefficients. In fact, features which are multiples of the feature "year" have the highest coefficients.  Hence, it is important that this feature be included in the data collected in the future.  
 
 ![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/05310859-2f83-44a1-bb3b-8e999f1fb58b)
 
