@@ -123,3 +123,13 @@ Model 5 - ridge model with alpha = 1 and Polynomial Features (degree = 2) will b
 ![image](https://github.com/CarolTeo11/Assignment-11.1/assets/130137674/05310859-2f83-44a1-bb3b-8e999f1fb58b)
 
 However, if the client has new data, he/she can run the model using np.exp(best_model.predict(new_data)) to estimate the price of the car. 
+
+Next Steps and recommendations: 
+
+a. It is recommended that new data be obtained to test the validity of the model.  
+
+b. It is recommended that a time series model be deployed to study the effects of time on car prices.  
+
+c. It may be appropriate to re-run the model with only data in recent year, i.e. limit values of year to 2000 onwards, so that we can be more focused on current prices.  
+
+d. Lastly, it may be timely to review and collect new data such as horsepower, start-up time from 0 to 100kmh and acceleration, etc., as technology and human behaviours have changed and consumers may be more inclined to purchase cars based on performance rather than the technical specifications e.g. cylinders. 
